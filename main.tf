@@ -6,3 +6,12 @@ resource "aws_instance" "example" {
     Name = "Sample"
   }
 }
+
+resource "aws_s3_bucket" "sample" {
+  bucket = "creating-s3-bucket-using-terraform-1"
+
+  tags = {
+    Name        = "My bucket"
+    Environment = "Dev"
+  }
+}
